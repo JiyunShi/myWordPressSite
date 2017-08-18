@@ -44,7 +44,9 @@ if ( ! function_exists( 'jspage_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'jspage' ),
+			'menu-1' => esc_html__( 'Header', 'jspage' ),
+                        'menu-2' => esc_html__( 'Social', 'jspage' ),
+                        
 		) );
 
 		/*
@@ -74,14 +76,74 @@ if ( ! function_exists( 'jspage_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 90,
+			'width'       => 90,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'jspage_setup' );
+
+
+/**
+ * Register custom fonts.
+ */
+function jspage_fonts_url() {
+	$fonts_url = '';
+
+	/*
+	 * Translators: If there are characters in your language that are not
+	 * supported by Source Sans Pro and PT Serif, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$source_sans_pro = _x( 'on', 'Source Sans Pro font: on or off', 'jspage' );
+        $pt_serif = _x( 'on', 'pt_serif font: on or off', 'jspage' );
+        
+        $font_families = array();
+        
+        if ( 'off' !== $source_sans_pro ) {
+	$font_families[] = 'Source Sans Pro:400,400i,700,900';
+	}
+        
+        if ( 'off' !== $pt_serif ) {
+            $font_families[] = 'PT Serif:400,400i,700,700i';
+        }
+        
+	if ( in_array('on', array($source_sans_pro, $pt_serif)) ){
+		
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
+
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array  $urls           URLs to print for resource hints.
+ * @param string $relation_type  The relation type the URLs are printed.
+ * @return array $urls           URLs to print for resource hints.
+ */
+function jspage_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'jspage-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'jspage_resource_hints', 10, 2 );
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -94,6 +156,9 @@ function jspage_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'jspage_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'jspage_content_width', 0 );
+
+
+
 
 /**
  * Register widget area.
@@ -117,9 +182,20 @@ add_action( 'widgets_init', 'jspage_widgets_init' );
  * Enqueue scripts and styles.
  */
 function jspage_scripts() {
+        
+        //Enqueue Google Fonts: Source Sans Pro and PT serif
+        wp_enqueue_style('jspage-fonts', jspage_fonts_url());
+    
 	wp_enqueue_style( 'jspage-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'jspage-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'jspage-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+        
+        //set up globle varible jspageScreenReaderText for navigation.js
+        wp_localize_script('jspage-navigation', 'jspageScreenReaderText', ['expand' =>__( 'Expand child menu', 'jspage' ),
+            'collapse'=>__( 'Collapse child menu', 'jspage' ),
+            ]);
+        
+        
 
 	wp_enqueue_script( 'jspage-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

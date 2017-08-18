@@ -1,12 +1,12 @@
 /*!
 Theme Name: Jspage
-Theme URI: http://underscores.me/
-Author: Jiyun
+Theme URI: https://github.com/JiyunShi/myWordPressSite
+Author: Jiyun Shi
 Author URI: https://www.linkedin.com/in/jiyunshi/
-Description: An awsome new theme developed based on Jspage
+Description: An new theme for personal website. 
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: jspage
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
@@ -86,14 +86,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "modules/clearings";
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 @import "site/site";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
 # Infinite scroll
