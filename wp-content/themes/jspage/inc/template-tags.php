@@ -23,13 +23,15 @@ if ( ! function_exists( 'jspage_posted_on' ) ) :
 			esc_attr( get_the_modified_date( 'c' ) ),
 			esc_html( get_the_modified_date() )
 		);
-
+                
+                //show post date/time
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
 			esc_html_x( 'Published on %s', 'post date', 'jspage' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
-
+                
+                //show author
 		$byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'Written by %s', 'post author', 'jspage' ),
@@ -37,7 +39,46 @@ if ( ! function_exists( 'jspage_posted_on' ) ) :
 		);
 
 		echo '<span class="byline"> ' . $byline . '</span> <span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
-
+                
+                
+                //show comments/replies
+		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+			echo '  <span class="comments-link"><span class="extra">Discussion</span>';
+			comments_popup_link(
+				sprintf(
+					wp_kses(
+						/* translators: %s: post title */
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'jspage' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				)
+			);
+			echo '</span>';
+		}
+                
+                //show edit button, under author's user only
+		edit_post_link(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'jspage' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			),
+			'  <span class="edit-link"><span class="extra">Admin</span>',
+			'</span>'
+		);                
+                
 	}
 endif;
 
@@ -58,41 +99,7 @@ if ( ! function_exists( 'jspage_entry_footer' ) ) :
 			}
 		}
 
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'jspage' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-			echo '</span>';
-		}
-
-		edit_post_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'jspage' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
+                
 	}
 endif;
 
@@ -109,6 +116,21 @@ function jspage_the_category_list() {
 				/* translators: 1: list of categories. */
 				printf( '<span class="cat-links">' . esc_html__( '%1$s', 'jspage' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
+    
+    
+}
+
+
+function jspage_post_navigation(){
+    the_post_navigation([
+        'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'jspage' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Next post:', 'jspage' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'jspage' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Previous post:', 'jspage' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+    ]);
+    
     
     
 }
