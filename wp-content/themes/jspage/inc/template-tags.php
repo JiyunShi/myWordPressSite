@@ -134,3 +134,24 @@ function jspage_post_navigation(){
     
     
 }
+
+
+
+/**
+ *  Customize ellipsis at end of excerpts
+ */
+
+function jspage_excerpt_more($more){
+    return "...";
+}
+
+add_filter('excerpt_more', 'jspage_excerpt_more');
+
+/**
+ *  Filter excerpt length to 100 words
+ */
+
+function jspage_excerpt_length($length){
+    return 100;
+}
+add_filter('excerpt_length', 'jspage_excerpt_length');

@@ -27,6 +27,16 @@
 		endif; ?>
 	</header><!-- .entry-header -->
         
+        <?php if (has_post_thumbnail()): ?>
+        <figure class="featured-image full-bleed">
+        <?php
+            the_post_thumbnail('jspage-full-bleed');
+        ?>
+        </figure>
+        <?php endif; ?>
+        
+        
+        
         <section class ="post-content">
             <?php
             	if ( !is_active_sidebar('sidebar-1')) : ?>
