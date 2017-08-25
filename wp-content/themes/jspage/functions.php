@@ -43,7 +43,7 @@ if ( ! function_exists( 'jspage_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
                 
                 add_image_size('jspage-full-bleed', 2000, 1200, true);
-                
+                add_image_size('jspage-index-img', 800, 450, true);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -183,6 +183,16 @@ function jspage_widgets_init() {
 		'name'          => esc_html__( 'Footer Widgets', 'jspage' ),
 		'id'            => 'footer-1',
 		'description'   => esc_html__( 'Add Footer widgets here.', 'jspage' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+        
+        register_sidebar( array(
+                'name'          => esc_html__( 'Page Widgets', 'jspage' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add Page widgets here.', 'jspage' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

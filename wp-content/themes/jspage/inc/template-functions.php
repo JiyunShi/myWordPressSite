@@ -32,7 +32,10 @@ function jspage_body_classes( $classes ) {
         }else{
             $classes[] = 'no-sidebar';
         }
-        
+        // Adds a class if the page side bar is in using.
+        if(is_active_sidebar('sidebar-2')){
+            $classes[] = 'has-page-sidebar';
+        }
         
 	return $classes;
 }

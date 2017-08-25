@@ -751,6 +751,41 @@ a:hover, a:active {
 	border-bottom-color: white;
 }
 
+.pagination {
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucia Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.pagination .nav-links {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+
+.pagination a,
+.pagination span {
+	padding: .5em 1em;
+	background: white;
+}
+
+.pagination a {
+	text-decoration: none;
+}
+
+.pagination a:focus, .pagination a:hover {
+	color: white;
+	background: #b51c35;
+}
+
+.pagination .current {
+	font-weight: 600;
+	color: #b51c35;
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -876,7 +911,8 @@ and open the template in the editor.
 }
 
 @media screen and (min-width: 900px) {
-	.single.has-sidebar .hentry {
+	.single.has-sidebar .hentry,
+	.page .hentry {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -886,17 +922,33 @@ and open the template in the editor.
 		    -ms-flex-pack: justify;
 		        justify-content: space-between;
 	}
-	.single.has-sidebar .entry-header {
+	.single.has-sidebar .entry-header,
+	.page .entry-header {
 		width: 100%;
 		-webkit-box-flex: 1;
 		    -ms-flex: 1 0 100%;
 		        flex: 1 0 100%;
 	}
-	.single.has-sidebar .post-content {
+	.single.has-sidebar .post-content,
+	.page .post-content {
 		width: 60%;
 	}
-	.single.has-sidebar .widget-area {
+	.single.has-sidebar .widget-area,
+	.page .widget-area {
 		width: 30%;
+	}
+	.single.has-sidebar.has-page-sidebar .hentry,
+	.page.has-page-sidebar .hentry {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		    -ms-flex-direction: row-reverse;
+		        flex-direction: row-reverse;
+	}
+	.single.has-sidebar:not(.has-page-sidebar) .hentry,
+	.page:not(.has-page-sidebar) .hentry {
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
 	}
 	.single.no-sidebar .post-content__wrap {
 		display: -webkit-box;
@@ -921,7 +973,8 @@ and open the template in the editor.
 	background-color: #eee;
 }
 
-.archive-view .post {
+.archive-view .post,
+.archive-view .page {
 	background-color: white;
 	position: relative;
 }
@@ -941,12 +994,57 @@ and open the template in the editor.
 		-ms-flex-wrap: wrap;
 		    flex-wrap: wrap;
 	}
+	.archive-view.has-sidebar .page-header {
+		width: 100%;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1 0 100%;
+		        flex: 1 0 100%;
+	}
 	.archive-view.has-sidebar .content-area {
 		width: 60%;
 	}
 	.archive-view.has-sidebar .widget-area {
 		width: 30%;
 	}
+	.archive-view.has-sidebar .widget-area.footer-widgets {
+		width: 100%;
+	}
+}
+
+.page-header {
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucia Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+}
+
+.page-title {
+	margin: 0 0 .5em;
+}
+
+.archive-description {
+	margin: -1em 0 2em;
+}
+
+.sticky::before {
+	content: "";
+	display: block;
+	width: 2em;
+	height: 2em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-width: 0 2em 2em 0;
+	border-color: #eee #eee white;
+	border-style: solid;
+	box-shadow: -1px 2px 2px rgba(26, 26, 26, 0.1);
+}
+
+.index-image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.index-image a:focus > img,
+.index-image a:hover > img {
+	opacity: .8;
 }
 
 .continue-reading {
@@ -1408,6 +1506,25 @@ button.dropdown-toggle {
 .full-bleed img {
 	display: block;
 	margin: 0 auto;
+}
+
+.no-results .page-content,
+not-found .page-content {
+	background-color: #b51c35;
+	padding: 1em 1em 1em 1em;
+	color: white;
+}
+
+.no-results .page-content .search-submit,
+not-found .page-content .search-submit {
+	border-color: white;
+	color: white;
+}
+
+.no-results .page-content .search-submit:hover, .no-results .page-content .search-submit:focus,
+not-found .page-content .search-submit:hover,
+not-found .page-content .search-submit:focus {
+	color: #b51c35;
 }
 
 /*--------------------------------------------------------------

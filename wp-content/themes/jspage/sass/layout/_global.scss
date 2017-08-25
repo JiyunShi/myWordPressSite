@@ -29,8 +29,9 @@ and open the template in the editor.
 
 
 @media screen and (min-width: $query__medium){
-    .single {
-        &.has-sidebar{
+    .single.has-sidebar,
+    .page{
+        //&.has-sidebar{
 
             .hentry{
                 display:flex;
@@ -47,13 +48,25 @@ and open the template in the editor.
                 width: $size__ratio-large;
             }
             .widget-area{
-                width: $size__ratio-small;
+                    width: $size__ratio-small;
             }
 
 
 
-        }
+        //}
     
+        
+        &.has-page-sidebar{
+            .hentry{
+                flex-direction: row-reverse;
+            }
+        }
+        &:not(.has-page-sidebar){
+            .hentry{
+                justify-content: flex-end;
+            }
+        }
+        
     }
     
     .single{

@@ -215,3 +215,24 @@
 		margin: 0 auto;
 	}
 }
+
+
+.no-results,
+not-found{
+    .page-content{
+        background-color: $color__interactive;
+        padding: 1em 1em 1em 1em;
+        color: white;
+        
+        .search-submit{
+           border-color: white;
+           color:white;
+           
+            &:hover,
+                &:focus{
+                color: $color__interactive;
+                    }
+        }
+    }
+    
+}
