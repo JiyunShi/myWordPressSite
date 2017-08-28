@@ -42,8 +42,8 @@ get_header(); ?>
 
 			//the_posts_navigation();
                         the_posts_pagination([
-                            'prev_text' =>__('Newer', 'jspage'),
-                            'next_text' =>__('Older', 'jspage'),
+                            'prev_text' =>jspage_get_svg(['icon' =>'arrow-left', 'fallback'=>true]) . __(' Newer', 'jspage'),
+                            'next_text' =>__('Older ', 'jspage') . jspage_get_svg(['icon' =>'arrow-right', 'fallback'=>true]),
                             'before_page_number' => '<span class="screen-reader-text">'.__('Page ','jspage').'</span>',
                         ]);
 

@@ -20,6 +20,9 @@
                 <?php
                     wp_nav_menu(['theme_location' => 'menu-2',
                                  'menu_id'      => 'social-menu',
+                                 'link_before'    => '<span class="screen-reader-text">',
+				 'link_after'     => '</span>' 
+                                 
                                 ] );
 		?>
                 </nav><!-- .social-menu -->

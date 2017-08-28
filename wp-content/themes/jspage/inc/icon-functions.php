@@ -35,6 +35,7 @@ add_action( 'wp_footer', 'jspage_include_svg_icons', 9999 );
  */
 function jspage_get_svg( $args = array() ) {
 	// Make sure $args are an array.
+        
 	if ( empty( $args ) ) {
 		return __( 'Please define default parameters in the form of an array.', 'jspage' );
 	}
@@ -128,10 +129,13 @@ function jspage_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	$social_icons = jspage_social_links_icons();
 
 	// Change SVG icon inside social links menu if there is supported URL.
-	if ( 'social' === $args->theme_location ) {
-		foreach ( $social_icons as $attr => $value ) {
+	if ( 'menu-2' === $args->theme_location ) {
+                foreach ( $social_icons as $attr => $value ) {
 			if ( false !== strpos( $item_output, $attr ) ) {
-				$item_output = str_replace( $args->link_after, '</span>' . jspage_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
+                                
+                               $item_output = str_replace( $args->link_after, '</span>' . jspage_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
+                                
+            //echo "<script type='text/javascript'>alert('$nameString');</script>";                    
 			}
 		}
 	}
