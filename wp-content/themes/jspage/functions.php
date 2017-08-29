@@ -84,6 +84,16 @@ if ( ! function_exists( 'jspage_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+                
+                
+                /*Editor Styles */
+                add_editor_style(['inc/editor-styles.css',jspage_fonts_url()]);
+                
+                
+                
+                
+                
+                
 	}
 endif;
 add_action( 'after_setup_theme', 'jspage_setup' );

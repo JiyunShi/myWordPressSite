@@ -76,7 +76,7 @@ function jspage_customize_register( $wp_customize ) {
 	);
 	
 	// Create excerpt or full content settings
-	$wp_customize->add_setting(	'length_setting',
+	$wp_customize->add_setting('length_setting',
 		array(
 			'default'			=> 'excerpt',
 			'type'				=> 'theme_mod',
@@ -86,7 +86,7 @@ function jspage_customize_register( $wp_customize ) {
 	);
 
 	// Add the controls
-	$wp_customize->add_control(	'jspage_length_control',
+	$wp_customize->add_control('jspage_length_control',
 		array(
 			'type'		=> 'radio',
 			'label'		=> __( 'Index/archive displays', 'jspage' ),
