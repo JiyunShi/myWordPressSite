@@ -43,8 +43,11 @@
 
             <div class="entry-content">
                     <?php
+                    $length_setting = get_theme_mod('length_setting');
+                    if('excerpt'===$length_setting){
                         the_excerpt();
-                        /*the_content( sprintf(
+                    }else{
+                        the_content( sprintf(
                             wp_kses(
                              // translators: %s: Name of current post. Only visible to screen readers 
                                 __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'jspage' ),
@@ -57,10 +60,16 @@
                             get_the_title()
                             ) );
 
-                        wp_link_pages( array(
+  
+                    }
+                    
+                    /*
+                     *      wp_link_pages( array(
                             'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'jspage' ),
                             'after'  => '</div>',
-                            ) );*/
+                            ) );
+                     */
+                        
                     ?>
             </div><!-- .entry-content -->
 
