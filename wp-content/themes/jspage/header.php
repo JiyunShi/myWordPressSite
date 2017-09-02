@@ -25,7 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'jspage' ); ?></a>
         
         <!-- display header image -->
-        <?php if(get_header_image()&&is_front_page()): ?>
+        <?php if(get_header_image()&&(is_front_page()|| is_home())): ?>
             <figure class="header-image">
                 <?php the_header_image_tag(); ?>
             </figure> <!-- header image-->

@@ -32,12 +32,17 @@
 <body>
    
   <!-- Header Section Start -->
-  <div id="header">
+  
+  <div id="header" 
+       <?php if(get_header_image()&&(is_front_page()|| is_home())): ?>
+       style="background-image: url(<?php echo get_header_image();?>);"
+       <?php endif; ?>>
     <div class="container">
       <div class="col-md-12 top-header">
         <div class="logo-menu">
           <div class="logo pull-left wow fadeInDown animated" data-wow-delay=".2s">
-            <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"></a>
+            <?php
+			the_custom_logo();  ?>
           </div> 
           <div class="pull-right wow fadeInDown animated" data-wow-delay=".2">
             <div id="menu" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
@@ -48,7 +53,10 @@
         <div class="sidebar-nav">
           <!-- navigation start -->
           <div class="navmenu navmenu-default navmenu-fixed-right offcanvas" style="" id="navigation">
-            <a href="index.html"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="logo"></a>
+              <div class ="logo">
+                  <?php
+			the_custom_logo();  ?>
+                  </div>
             <ul class="nav navmenu-nav">
               <li class="active"><a href="#header">Home</a></li>
               <li><a href="#works">Portfolio</a></li>
@@ -63,10 +71,10 @@
       <div class="row">
         <div class="col-md-12">
           <div class="banner text-center">
-            <h1 class="wow fadeInDown animated" data-wow-delay=".8s">Frankenstein Shuvo Musa</h1>
-            <h2 class="wow fadeInDown animated" data-wow-delay=".6s">Passionate Web developer, WordPressian & GEEK ;)</h2>
+            <h1 class="wow fadeInDown animated" data-wow-delay=".8s">Joey Shi</h1>
+            <h2 class="wow fadeInDown animated" data-wow-delay=".6s">Passionate Web developer</h2>
             <a href="#" class="btn btn-border lg wow fadeInLeft animated" data-wow-delay="1.0s">Hire Me</a>
-            <a href="<?php echo get_home_url(); ?>/blog/" class="btn btn-common lg wow fadeInRight animated" data-wow-delay="1.0s">Learn More</a>
+            <a href="<?php echo get_home_url(); ?>/blog/" class="btn btn-common lg wow fadeInRight animated" data-wow-delay="1.0s">Blog</a>
             <div class="scroll">
               <a href="#works"><i class="fa fa-angle-down wow fadeInUp animated" data-wow-delay="1.2s"></i></a>
           </div>

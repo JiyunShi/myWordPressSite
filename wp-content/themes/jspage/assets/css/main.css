@@ -680,3 +680,15 @@ img {
   color: #6c9c01;
 }
 /* Footer Section End */
+
+
+.logo{
+    width: 70px;
+    height: 70px;
+    
+}
+
+.logo a img{
+    width: 100%;
+    height: auto;
+}
