@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-  <meta charset="utf-8">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GEEK - Onepage Personal Portfolio Template</title>
   
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/bootstrap.min.css">
@@ -28,9 +27,11 @@
                 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
                 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
               <![endif]-->
+    <?php wp_head(); ?>
 </head>
-<body>
-   
+<body <?php body_class(); ?>>
+   <div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'jspage' ); ?></a>
   <!-- Header Section Start -->
   
   <div id="header" 
@@ -60,7 +61,6 @@
             <ul class="nav navmenu-nav">
               <li class="active"><a href="#header">Home</a></li>
               <li><a href="#works">Portfolio</a></li>
-              <li><a href="#clients">Clients</a></li>
               <li><a href="#blog">Blog</a></li>
               <li><a href="#feedback">Hire/Contact Me</a></li>
             </ul>
@@ -73,7 +73,7 @@
           <div class="banner text-center">
             <h1 class="wow fadeInDown animated" data-wow-delay=".8s">Joey Shi</h1>
             <h2 class="wow fadeInDown animated" data-wow-delay=".6s">Passionate Web developer</h2>
-            <a href="#" class="btn btn-border lg wow fadeInLeft animated" data-wow-delay="1.0s">Hire Me</a>
+            <a href="#feedback" class="btn btn-border lg wow fadeInLeft animated" data-wow-delay="1.0s">Hire Me</a>
             <a href="<?php echo get_home_url(); ?>/blog/" class="btn btn-common lg wow fadeInRight animated" data-wow-delay="1.0s">Blog</a>
             <div class="scroll">
               <a href="#works"><i class="fa fa-angle-down wow fadeInUp animated" data-wow-delay="1.2s"></i></a>
@@ -84,7 +84,8 @@
     </div>
   </div>
   <!-- Header Section End -->
-
+  
+  <div id="content" class="site-content">
   <!-- Work Section Start -->
   <section id="works">
     <div class="container">
@@ -148,7 +149,7 @@
           </ol>
           <div class="carousel-inner">
             <div class="item active">
-              <blockquote>
+              
                 <div class="commant">
                   <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="claint">
@@ -164,11 +165,11 @@
                     </div>
                   </div>
                 </div>
-              </blockquote>
+              
             </div>
 
             <div class="item">
-              <blockquote>
+              
                 <div class="commant">
                   <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="claint">
@@ -184,10 +185,10 @@
                     </div>
                   </div>
                 </div>
-              </blockquote>
+              
             </div>
             <div class="item">
-              <blockquote>
+              
                 <div class="commant">
                   <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="claint">
@@ -203,7 +204,7 @@
                     </div>
                   </div>
                 </div>
-              </blockquote>
+             
             </div>
           </div>
         </div>
@@ -211,40 +212,6 @@
     </div>
   </section>
   <!-- Testimonial Section End -->
-  <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >手机网站模板</a></div>
-
-  <!-- Clients Section Start -->
-  <section id="clients">
-    <div class="container">
-      <div class="row">
-        <h1 class="section-title wow fadeInLeft animated" data-wow-delay=".6s">My Valuable <br><span>Clients</span></h1>
-        <div id="clients-carousel" class="owl-carousel owl-theme">
-          <div class="item wow fadeInLeft animated" data-wow-delay=".9s">
-            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/img1.png" alt=""></a>
-          </div>
-          <div class="item wow fadeInLeft animated" data-wow-delay=".9s">
-            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/img2.png" alt=""></a>
-          </div>
-          <div class="item wow fadeInRight animated" data-wow-delay=".9s">
-            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/img3.png" alt=""></a>
-          </div>
-          <div class="item wow fadeInRight animated" data-wow-delay=".9s">
-            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/img4.png" alt=""></a>
-          </div>
-          <div class="item wow fadeIn animated">
-            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/img5.png" alt=""></a>
-          </div>
-          <div class="item wow fadeIn animated">
-            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/img6.png" alt=""></a>
-          </div>
-          <div class="item wow fadeIn animated">
-            <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/clients/img7.png" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Clients Section End -->
 
   <!-- Skills Section Start -->
   <section id="skills">
@@ -396,14 +363,36 @@
     </div>
   </section>
   <!-- Feedback Section End -->
-
+  </div><!-- Content End-->
   <!-- Footer section Start -->
   <footer id="footer">
+    
+                
     <div class="container">
+      <nav class="social-menu">
+                <?php
+                    wp_nav_menu(['theme_location' => 'menu-2',
+                                 'menu_id'      => 'social-menu',
+                                 'link_before'    => '<span class="screen-reader-text">',
+				 'link_after'     => '</span>' 
+                                 
+                                ] );
+		?>
+                </nav><!-- .social-menu -->                  
       <div class="row">
         <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
           <div class="copyright wow fadeInUp animated" data-wow-delay=".8s">
-            <p>Copyright &copy; 2014 GrayGrids | All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+            <div class="site-info">
+                <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'jspage' ) ); ?>"><?php
+                        /* translators: %s: CMS name, i.e. WordPress. */
+                        printf( esc_html__( 'Proudly powered by %s', 'jspage' ), 'WordPress' );
+                ?></a>
+                <span class="sep"> | </span>
+                <?php
+                        /* translators: 1: Theme name, 2: Theme author. */
+                        printf( esc_html__( 'Theme: %1$s by %2$s.', 'jspage' ), 'jspage', '<a href="https://www.linkedin.com/in/jiyunshi/">Jiyun</a>' );
+                ?>
+		</div><!-- .site-info -->
           </div>
         </div>
         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
@@ -418,7 +407,10 @@
     </div>
   </footer>
   <!-- Footer section End -->
+  
+  </div><!-- #page -->
 
+  <?php wp_footer(); ?>
   <!-- jQuery Load -->
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-min.js"></script>
   <!-- Bootstrap JS -->

@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -899,14 +900,8 @@ and open the template in the editor.
 	}
 }
 
-@media screen and (min-width: 900px) {
-	.site-content {
-		padding: 2em 3em;
-	}
-}
-
 .site-content {
-	max-width: 1080px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -964,6 +959,10 @@ and open the template in the editor.
 	.single.no-sidebar .post-content__wrap .post-content__body {
 		width: 70%;
 	}
+}
+
+.container {
+	padding: 2em;
 }
 
 /*--------------------------------------------------------------
@@ -1111,6 +1110,10 @@ and open the template in the editor.
 	width: auto;
 }
 
+.logo .custom-logo-link {
+	margin: 0;
+}
+
 .site-branding__text {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1169,6 +1172,116 @@ and open the template in the editor.
 	}
 }
 
+/* Header Section Start */
+#header {
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	color: #ffffff;
+}
+
+#header:before {
+	background: rgba(1, 0, 2, 0.7);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	bottom: 0px;
+	content: "";
+	display: block;
+}
+
+#header .top-header {
+	margin-top: 50px;
+}
+
+#header .banner {
+	margin: 50px;
+}
+
+#header .banner h1 {
+	color: #82BC00;
+	font-size: 42px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+#header .banner h2 {
+	color: #ffffff;
+	font-size: 45px;
+	margin: 32px 0px 50px;
+}
+
+#header .banner .scroll {
+	margin: 50px 0;
+}
+
+#header .banner .scroll a i {
+	font-size: 48px;
+	color: #82BC00;
+	padding: 12px;
+	width: 68px;
+	height: 68px;
+	text-align: center;
+	border-radius: 50%;
+	background: #fff;
+	transition: all 0.3s ease;
+}
+
+#header .banner .scroll a i:hover {
+	background: #82BC00;
+	color: #ffffff;
+}
+
+#header .top-header #menu {
+	display: block;
+	width: 48px;
+	height: 48px;
+	border: 1px solid #ffffff;
+	padding: 24px 30px;
+	cursor: pointer;
+}
+
+#header .top-header #menu span {
+	background-color: #ffffff;
+	display: block;
+	font-size: 0px;
+	height: 3px;
+	margin-top: -1px;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 40px;
+}
+
+#header .top-header #menu span:before,
+#header .top-header #menu span:after {
+	background: #ffffff;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	transition: all 0.3s ease;
+	width: 100%;
+}
+
+#header .top-header #menu span:before {
+	-webkit-transform: translateY(-300%);
+	transform: translateY(-300%);
+}
+
+#header .top-header #menu span:after {
+	-webkit-transform: translateY(300%);
+	transform: translateY(300%);
+}
+
+#header .top-header #menu:hover span,
+#header .top-header #menu:hover span:after,
+#header .top-header #menu:hover span:before {
+	background: #82BC00;
+}
+
+/* Header Section End */
 /*
 Header Menu
 */
@@ -1496,10 +1609,10 @@ button.dropdown-toggle {
 	}
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1200px) {
 	.full-bleed {
-		margin-right: calc( ((-100vw + 1080px)/2) - 2em);
-		margin-left: calc( ((-100vw + 1080px)/2) - 2em);
+		margin-right: calc( ((-100vw + 1200px)/2) - 2em);
+		margin-left: calc( ((-100vw + 1200px)/2) - 2em);
 	}
 }
 
@@ -1616,7 +1729,7 @@ not-found .page-content .search-submit:focus {
 	}
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1200px) {
 	.no-sidebar .children {
 		margin-left: 3em;
 	}

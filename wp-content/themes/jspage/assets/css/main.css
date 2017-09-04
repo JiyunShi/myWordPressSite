@@ -1,6 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,900,300,900italic);
+
 body {
-  font-family: 'Lato', sans-serif;
+  
   background: #fff;
   font-size: 14px;
   font-weight: 300;
@@ -134,125 +134,16 @@ img {
   border-color: #fff;
 }
 /* Navbar End */
-/* Header Section Start */
-#header {
-  width: 100%;
-  background: url(../img/backgrounds/banner.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  color: #ffffff;
-}
-#header:before {
-  background: rgba(1, 0, 2, 0.7);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  bottom: 0px;
-  content: "";
-  display: block;
-}
-#header .top-header {
-  margin-top: 50px;
-}
-#header .top-header #menu {
-  display: block;
-  width: 48px;
-  height: 48px;
-  border: 1px solid #ffffff;
-  padding: 24px 30px;
-  cursor: pointer;
-}
-#header .top-header #menu span {
-  background-color: #ffffff;
-  display: block;
-  font-size: 0px;
-  height: 3px;
-  margin-top: -1px;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 40px;
-}
-#header .top-header #menu span:before,
-#header .top-header #menu span:after {
-  background: #ffffff;
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-#header .top-header #menu span:before {
-  -webkit-transform: translateY(-300%);
-  -moz-transform: translateY(-300%);
-  transform: translateY(-300%);
-}
-#header .top-header #menu span:after {
-  -webkit-transform: translateY(300%);
-  -moz-transform: translateY(300%);
-  transform: translateY(300%);
-}
-#header .top-header #menu:hover span,
-#header .top-header #menu:hover span:after,
-#header .top-header #menu:hover span:before {
-  background: #82BC00;
-}
 
-#header .banner {
-  margin: 50px;
-}
-#header .banner h1 {
-  color: #82BC00;
-  font-size: 42px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-#header .banner h2 {
-  color: #ffffff;
-  font-size: 45px;
-  margin: 32px 0px 50px;
-}
-#header .banner .scroll {
-  margin: 50px 0;
-}
-#header .banner .scroll a i {
-  font-size: 48px;
-  color: #82BC00;
-  padding: 12px;
-  width: 68px;
-  height: 68px;
-  text-align: center;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-#header .banner .scroll a i:hover {
-  background: #82BC00;
-  color: #ffffff;
-}
-.copyrights{
-	text-indent:-9999px;
-	height:0;
-	line-height:0;
-	font-size:0;
-	overflow:hidden;
-}
-/* Header Section End */
 /* Works Section Start */
 #works {
   background: #ffffff;
   width: 100%;
 }
+
 #works .grid-left .large {
   float: left;
-  width: 430px;
+    width: 420px;
   height: 100%;
   position: relative;
 }
@@ -422,33 +313,14 @@ img {
   border: none;
 }
 /* Testimonial Section End */
-/* Clients Section Start */
-#clients .section-title i {
-  color: #82bc00;
-}
-#clients #clients-carousel a img {
-  opacity: 0.5;
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  filter: gray;
-  -webkit-transition: all .6s ease;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-}
-#clients #clients-carousel a img:hover {
-  filter: grayscale(0%);
-  -webkit-filter: grayscale(0%);
-  filter: gray;
-  -webkit-transition: all .6s ease;
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
-  opacity: 1.0;
-}
-/* Clients Section End */
+
 /* Skills Section Start */
 #skills {
   background: url(../img/backgrounds/skill-bg.jpg);
   background-size: cover;
   color: #ffffff;
   text-align: center;
+  margin-top: 10em;
 }
 #skills .section-title {
   color: #ffffff;
@@ -460,7 +332,7 @@ img {
   border-radius: 50%;
   height: 216px;
   padding: 6px 6px;
-  margin: 24px 60px;
+  margin: 24px 15px;
   position: relative;
 }
 #skills .count-info {
