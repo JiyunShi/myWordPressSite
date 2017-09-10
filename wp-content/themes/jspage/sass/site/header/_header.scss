@@ -103,7 +103,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  color: #ffffff;
+  color: $color_frontpage_contrast;
   
   &:before{
     background: rgba(1, 0, 2, 0.7);
@@ -123,13 +123,13 @@
         margin: 50px;
         
         h1{
-            color: #82BC00;
+            color: $color_frontpage_main;
             font-size: 42px;
             font-weight: 400;
             text-transform: uppercase;
         }
         h2 {
-            color: #ffffff;
+            color: $color_frontpage_contrast;
             font-size: 45px;
             margin: 32px 0px 50px;
         }
@@ -139,20 +139,20 @@
             a{
                 i{
                     font-size: 48px;
-                    color: #82BC00;
+                    color: $color_frontpage_main;
                     padding: 12px;
                     width: 68px;
                     height: 68px;
                     text-align: center;
                     border-radius: 50%;
-                    background: #fff;
+                    background: $color_frontpage_contrast;
                     -webkit-transition: all 0.3s ease;
                     -moz-transition: all 0.3s ease;
                     transition: all 0.3s ease;
                     
                     &:hover{
-                        background: #82BC00;
-                        color: #ffffff;
+                        background: $color_frontpage_main;
+                        color: $color_frontpage_contrast;
                     }
                 }
             }
@@ -164,17 +164,19 @@
   
   
 }
-
+/*
+Header Menu Span
+*/
 #header .top-header #menu {
   display: block;
   width: 48px;
   height: 48px;
-  border: 1px solid #ffffff;
+  border: 1px solid $color_frontpage_contrast;
   padding: 24px 30px;
   cursor: pointer;
 }
 #header .top-header #menu span {
-  background-color: #ffffff;
+  background-color: $color_frontpage_contrast;
   display: block;
   font-size: 0px;
   height: 3px;
@@ -186,7 +188,7 @@
 }
 #header .top-header #menu span:before,
 #header .top-header #menu span:after {
-  background: #ffffff;
+  background: $color_frontpage_contrast;
   content: "";
   height: 100%;
   left: 0;
@@ -209,16 +211,9 @@
 #header .top-header #menu:hover span,
 #header .top-header #menu:hover span:after,
 #header .top-header #menu:hover span:before {
-  background: #82BC00;
+  background: $color_frontpage_main;
 }
-
 
 /* Header Section End */
 
-
-
-
-/*
-Header Menu
-*/
 @import "header-menu";

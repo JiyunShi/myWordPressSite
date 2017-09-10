@@ -408,6 +408,7 @@ html {
 body {
 	background: #fff;
 	/* Fallback for when there is no custom background color defined. */
+	box-sizing: border-box;
 }
 
 blockquote, q {
@@ -423,6 +424,7 @@ hr {
 
 ul, ol {
 	margin: 0 0 1.5em;
+	padding: 0;
 }
 
 ul {
@@ -496,6 +498,66 @@ td:first-child {
 th:last-child,
 td:last-child {
 	padding-right: 0;
+}
+
+/*
+Button Style updates from BootStrape
+*/
+.lg {
+	width: 260px;
+}
+
+.btn-border,
+.btn-common {
+	color: #fff;
+	font-size: 22px;
+	border: 1px solid #fff;
+	padding: 16px 36px;
+	font-weight: 400;
+	margin-left: 36px;
+	margin-right: 36px;
+	border-radius: 4px;
+	position: relative;
+	z-index: 10;
+}
+
+.btn-border:after,
+.btn-common:after {
+	width: 100%;
+	height: 0px;
+	bottom: 0px;
+	left: 0px;
+	background: #fff;
+}
+
+.btn-common {
+	background: #09d2c3;
+	border: 1px solid #09d2c3;
+}
+
+.btn-common:hover {
+	color: #09d2c3;
+	background: #09d2c3;
+	border: 1px solid #09d2c3;
+}
+
+.btn-common:hover:after {
+	height: 100%;
+}
+
+.btn-border:hover {
+	color: #09d2c3;
+}
+
+.btn-border:hover:after {
+	height: 100%;
+}
+
+.btn:after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	transition: all 0.3s ease;
 }
 
 /*--------------------------------------------------------------
@@ -586,6 +648,8 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: #000;
+	text-decoration: none;
+	transition: all 0.2s linear;
 }
 
 a:visited {
@@ -1178,7 +1242,7 @@ and open the template in the editor.
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
-	color: #ffffff;
+	color: #fff;
 }
 
 #header:before {
@@ -1201,14 +1265,14 @@ and open the template in the editor.
 }
 
 #header .banner h1 {
-	color: #82BC00;
+	color: #09d2c3;
 	font-size: 42px;
 	font-weight: 400;
 	text-transform: uppercase;
 }
 
 #header .banner h2 {
-	color: #ffffff;
+	color: #fff;
 	font-size: 45px;
 	margin: 32px 0px 50px;
 }
@@ -1219,7 +1283,7 @@ and open the template in the editor.
 
 #header .banner .scroll a i {
 	font-size: 48px;
-	color: #82BC00;
+	color: #09d2c3;
 	padding: 12px;
 	width: 68px;
 	height: 68px;
@@ -1230,21 +1294,24 @@ and open the template in the editor.
 }
 
 #header .banner .scroll a i:hover {
-	background: #82BC00;
-	color: #ffffff;
+	background: #09d2c3;
+	color: #fff;
 }
 
+/*
+Header Menu Span
+*/
 #header .top-header #menu {
 	display: block;
 	width: 48px;
 	height: 48px;
-	border: 1px solid #ffffff;
+	border: 1px solid #fff;
 	padding: 24px 30px;
 	cursor: pointer;
 }
 
 #header .top-header #menu span {
-	background-color: #ffffff;
+	background-color: #fff;
 	display: block;
 	font-size: 0px;
 	height: 3px;
@@ -1256,7 +1323,7 @@ and open the template in the editor.
 
 #header .top-header #menu span:before,
 #header .top-header #menu span:after {
-	background: #ffffff;
+	background: #fff;
 	content: "";
 	height: 100%;
 	left: 0;
@@ -1278,13 +1345,10 @@ and open the template in the editor.
 #header .top-header #menu:hover span,
 #header .top-header #menu:hover span:after,
 #header .top-header #menu:hover span:before {
-	background: #82BC00;
+	background: #09d2c3;
 }
 
 /* Header Section End */
-/*
-Header Menu
-*/
 .main-navigation {
 	display: block;
 	font-family: "Source Sans Pro", "Lucida Grande", "Lucia Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
@@ -1437,10 +1501,12 @@ button.dropdown-toggle {
 	}
 }
 
-/* Navbar  start */
+/*
+*Header Navigation Bar Start
+*/
 #navigation {
-	background: #82BC00;
-	border: 1px solid #82BC00;
+	background: #09d2c3;
+	border: 1px solid #09d2c3;
 	color: #fff;
 	padding-top: 50px;
 	text-align: center;
@@ -1470,8 +1536,7 @@ button.dropdown-toggle {
 	text-transform: uppercase;
 }
 
-#navigation .nav li:hover,
-#navigation .nav li .active {
+#navigation .nav li:hover, #navigation .nav li:active {
 	border-color: #fff;
 }
 
