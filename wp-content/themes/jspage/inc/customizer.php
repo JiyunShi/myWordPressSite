@@ -213,7 +213,8 @@ function jspage_header_style() {
 			.entry-summary a:hover,
 			.comment-content a:focus,
 			.comment-content a:hover,
-			.cat-links a {
+			.cat-links a,
+                        .pagination .current{
 				color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 			
@@ -260,7 +261,9 @@ function jspage_header_style() {
 			.reply a:hover, 
 			.reply a:focus,
 			.comment-form .form-submit input:hover, 
-			.comment-form .form-submit input:focus {
+			.comment-form .form-submit input:focus, 
+                        .pagination span:hover,
+                        .pagination a:hover{
 				background-color: <?php echo esc_attr( $interactive_color ); ?>;
 			}
 			

@@ -13,30 +13,30 @@
     .fact-block {
         color: #ffffff;
         background: rgba(255, 255, 255, 0.07);
-        width: 18em;
+        width: 12em;
         border-radius: 20%;
-        height: 18em;
-        padding: 1em 1em;
-        margin: 1em 1em;
+        height: 12em;
+        padding: 1em 0em;
+        margin: 1em -0.5em;
         position: relative;
     }
     
     .count-info {
         position: absolute;
         top: 0;
-        left: 5%;
-        width: 16em;
-        padding: 4em 3em;
-        height: 16em;
+        left: 0%;
+        width: 12em;
+        padding: 2em 0em;
+        height: 12em;
         
         h3 {
-            font-size: 4em;
+            font-size: 3em;
             font-weight: 700;
             line-height: 0.6em;
         }
         
         h4 {
-            font-size: 1.8em;
+            font-size: 1.2em;
             color: $color_frontpage_main;
             text-transform: uppercase;
         }

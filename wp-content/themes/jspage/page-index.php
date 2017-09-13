@@ -4,8 +4,9 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/bootstrap.min.css">
+
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/jasny-bootstrap.min.css">
   <!-- Main Style -->
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css">
@@ -344,18 +345,17 @@
           <div class="address">
             <h2>Contact Info</h2>
             <ul class="contact-info">
-              <li><i class="fa fa-mobile"></i> +88 019788XYZ</li>
-              <li><i class="fa fa-skype"></i> musa.xyz</li>
-              <li><i class="fa fa-envelope-o"></i> musaxyz@gmail.com</li>
+              <li><i class="fa fa-mobile"></i> （778）302-7625</li>
+             
+              <li><i class="fa fa-envelope-o"></i> brightnk@outlook.com</li>
             </ul>
           
           <h2>Follow Me</h2>
             <ul class="social-icon">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-              <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="https://github.com/JiyunShi"><i class="fa fa-github"></i></a></li>
+              <li><a href="https://www.facebook.com/jiyun.shi.35"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/jiyunshi/"><i class="fa fa-linkedin"></i></a></li>
+
             </ul>
           </div>
         </div>

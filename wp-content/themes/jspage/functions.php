@@ -288,7 +288,9 @@ function jspage_scripts() {
         
         //Enqueue Google Fonts: Source Sans Pro and PT serif
         wp_enqueue_style('jspage-fonts', jspage_fonts_url());
-    
+        
+        wp_enqueue_style('bootstrap', get_template_directory_uri().'/assets/css/bootstrap.min.css');
+
 	wp_enqueue_style( 'jspage-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jspage-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
