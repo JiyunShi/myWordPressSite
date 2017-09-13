@@ -38,3 +38,41 @@
         }
     }
 }
+
+
+#footer {
+    
+    font-size: 1.25em;
+    font-weight: 400;
+    
+    color: $color_frontpage_contrast;
+    width: 100%;
+    background: $color__skin;
+    border-top: 1px solid $color_frontpage_contrast;
+
+    .row {
+        padding: 20px 0;
+    }
+    
+
+    a {
+        color: $color_frontpage_main;
+        text-decoration: none;
+        &:hover{
+            color: darken($color_frontpage_main, 10%);
+        }
+        
+        .icon{
+            height: 2em;
+            width: 2em;
+        }
+        
+    }
+    
+}
+
+
+
+
+
+

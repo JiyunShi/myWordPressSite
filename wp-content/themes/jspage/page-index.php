@@ -369,7 +369,7 @@
     
                 
     <div class="container">
-      <nav class="social-menu">
+      <nav class="social-menu wow fadeInUp animated" data-wow-delay=".3s">
                 <?php
                     wp_nav_menu(['theme_location' => 'menu-2',
                                  'menu_id'      => 'social-menu',
