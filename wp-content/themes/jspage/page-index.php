@@ -337,7 +337,7 @@
               <span class="input-group-addon"><i class="fa fa-comments"></i></span>
               <textarea name="message" class="form-control large" placeholder="Massage"></textarea>
             </div>
-            <button type="submit" class="btn btn-green"><i class="fa fa-envelope-o"></i>Send</button>
+            <button type="submit" class="btn btn-send"><i class="fa fa-envelope-o"></i>Send</button>
           </form>
         </div>
         <div class="col-sm-4 col-md-4 col-md-offset-2 wow fadeInRight animated" data-wow-delay="1.4s">

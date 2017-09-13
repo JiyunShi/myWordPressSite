@@ -13,8 +13,7 @@
                 top: 42%;
                 left: 42%;
             }
-            
-            
+    
         }
       
       .grid-box {
@@ -35,6 +34,11 @@
   }
   
   .grid-right{
+        @media screen and (min-width: 992px){
+            padding: 0 1% 0 3.5%;
+        }
+        
+      
         .grid-box {
             width: 50%;
             height: 33%;

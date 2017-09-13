@@ -1,0 +1,92 @@
+#testimonial {
+    background: url(assets/img/backgrounds/bg.jpg);
+    background-size: cover;
+    color: #ffffff;
+    .section-title {
+      color: $color_frontpage_contrast;
+    }
+
+    blockquote {
+      border-left: none;
+      margin: 0;
+    }
+
+    .commant {
+      float: left;
+      background: rgba(54, 74, 86, 0.3);
+      margin: 0 90px 0 100px;
+
+      .claint {
+        width: 270px;
+        height: 270px;
+        margin-left: -15px;
+        position: relative;
+      }
+
+        .quote {
+            background: #ffffff;
+            width: 64px;
+            position: absolute;
+            top: 12%;
+            right: -67px;
+            height: 64px;
+            border-radius: 50%;
+            text-align: center;
+
+            i {
+                font-size: 30px;
+                color: $color_frontpage_main;
+                line-height: 65px;
+              }
+        }
+    }
+    
+    .info {
+        padding: 60px 60px  0px 60px;
+        p {
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 400;
+            font-style: italic;
+            text-align: justify;
+            padding-bottom: 32px;
+        }
+        
+        h4 {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 26px;
+            text-transform: uppercase;
+        }
+        
+        h5 {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+    }
+    
+    
+    
+    .carousel-indicators {
+        bottom: -50px;
+        li {
+            border-radius: 0;
+            border: none;
+            background-color: $color_frontpage_contrast;
+          }
+          
+        .active {
+            background-color: $color_frontpage_main;
+            border: none;
+        }
+        
+    }
+    
+    
+  
+}
+
+
+
