@@ -12,8 +12,12 @@
   }
   /* Works Section Start */
   #works .grid-left {
-    margin: 32px 0;
+    margin: 16px 0;
   }
+  #works .grid-right {
+    margin: 16px 0;
+  }
+  
   #works .grid-left .large {
     width: 458px;
   }
