@@ -82,8 +82,11 @@ Button Style updates from BootStrape
         background: $color_frontpage_main;
         border: 1px solid $color_frontpage_main;
         &:after{
-            height: 100%;
+            height: 100%;  
         }
+  }
+  &:checked{
+      color: #FFFFFF;
   }
 }
 .btn-border:hover {

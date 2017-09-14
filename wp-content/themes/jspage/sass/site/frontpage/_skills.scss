@@ -19,6 +19,11 @@
         padding: 1em 0em;
         margin: 1em -0.5em;
         position: relative;
+        
+        @media screen and (max-width: $query__mobile){
+        margin: 1em 1.5em;
+    }
+        
     }
     
     .count-info {

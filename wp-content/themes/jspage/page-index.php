@@ -73,7 +73,9 @@
         <div class="col-md-12">
           <div class="banner text-center">
             <h1 class="wow fadeInDown animated" data-wow-delay=".8s">Joey Shi</h1>
-            <h2 class="wow fadeInDown animated" data-wow-delay=".6s">Passionate Web developer</h2>
+            <div class="wow fadeInDown animated" data-wow-delay=".6s">
+            <h2>Passionate Web developer</h2>
+            </div>
             <a href="#feedback" class="btn btn-border lg wow fadeInLeft animated" data-wow-delay="1.0s">Hire Me</a>
             <a href="<?php echo get_home_url(); ?>/blog/" class="btn btn-common lg wow fadeInRight animated" data-wow-delay="1.0s">Blog</a>
             <div class="scroll">
@@ -140,7 +142,7 @@
   <section id="testimonial">
     <div class="container">
       <div class="row">
-        <h1 class="section-title wow fadeInLeft animated" data-wow-delay=".6s">What My<br>Client <br><span>Says</span></h1>
+        <h1 class="section-title wow fadeInLeft animated" data-wow-delay=".6s">What My<br>Friends <br><span>Says</span></h1>
         <div id="testimonial-carousel" class="carousel slide wow fadeInUp animated" data-ride="carousel" data-wow-delay="1.2s">
           <!-- Indicators -->
           <ol class="carousel-indicators">
