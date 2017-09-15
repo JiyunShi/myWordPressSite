@@ -2216,7 +2216,7 @@ not-found .page-content .search-submit:focus {
 ## Section Testimonial in frontpage
 --------------------------------------------------------------*/
 #testimonial {
-	background: url(assets/img/backgrounds/bg.jpg);
+	background: url(assets/img/backgrounds/bg.png);
 	background-size: cover;
 	color: #ffffff;
 }
@@ -2305,7 +2305,7 @@ not-found .page-content .search-submit:focus {
 ## Section Skills in frontpage
 --------------------------------------------------------------*/
 #skills {
-	background: url(assets/img/backgrounds/skill-bg.jpg);
+	background: url(assets/img/backgrounds/bg-black.jpg);
 	background-size: cover;
 	color: #ffffff;
 	text-align: center;
@@ -2377,12 +2377,13 @@ not-found .page-content .search-submit:focus {
 
 #blog .blog-large .large {
 	position: absolute;
-	width: 200px;
-	height: 196px;
+	width: 11em;
+	height: 11em;
 	right: 0px;
 	bottom: 0px;
 	background: rgba(255, 255, 255, 0.9);
 	padding: 15px;
+	overflow: hidden;
 }
 
 #blog .blog-large .large p {
@@ -2419,7 +2420,7 @@ not-found .page-content .search-submit:focus {
 ## Section Feedback in frontpage
 --------------------------------------------------------------*/
 #feedback {
-	background: url(assets/img/backgrounds/imgfooter.jpg);
+	background: url(assets/img/backgrounds/bg-black.jpg);
 	background-size: cover;
 }
 

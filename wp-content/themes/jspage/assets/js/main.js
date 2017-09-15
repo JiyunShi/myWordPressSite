@@ -21,21 +21,7 @@ var wow = new WOW({
 wow.init();
 
 jQuery(document).ready(function( $ ) {
-        $('.circle').circleProgress({
-        value: 0.70,
-        startAngle: 4.75,
-        size: 200,
-        fill: { gradient: ["#FFFFFF"] }
-      });
-        $('.two').circleProgress({
-          value: 0.75,
-        });
-        $('.three').circleProgress({
-          value: 0.50,
-        });
-        $('.four').circleProgress({
-          value: 0.90,
-        });
+    //circle-progress change into wow.js line 146, so the animation can be start after wow animation.     
 
    //Clients carousel Slider
     $('#clients-carousel').owlCarousel({
@@ -74,4 +60,11 @@ $(function() {
       }
     }
   });
+  
+  
+  //jumble effect on h1 frontpage
+  $('#editorName').jumble([9,210,195],false,true,false,500);
+  
+  $('.section-title span').jumble([9,210,195], [255,255,255],true,false,1500);
+  
 });

@@ -346,3 +346,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  *  Load SVG icon functions
  */
 require get_template_directory() . '/inc/icon-functions.php';
+
+
+/**
+ *  Add post handler on frontpage
+ */
+
+add_action( 'admin_post_nopriv_process_form', 'process_form_data' );
+add_action( 'admin_post_process_form', 'process_form_data' );
+function process_form_data() {
+    
+    extract( $_POST );
+    
+
+    
+    $body = 'name: '.$name."   \nemail: ".$email."   \nSubject: ".$subject."   \nMessage: ".$message;
+    
+    wp_mail('brightnk@outlook.com', 'A new request from Your site', $body);
+    
+    
+    wp_redirect(home_url().'/#header');
+}

@@ -72,7 +72,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="banner text-center">
-            <h1 class="wow fadeInDown animated" data-wow-delay=".8s">Joey Shi</h1>
+            <h1 id="editorName" class="wow fadeInDown animated" data-wow-delay=".8s">Joey Shi</h1>
             <div class="wow fadeInDown animated" data-wow-delay=".6s">
             <h2>Passionate Web developer</h2>
             </div>
@@ -98,38 +98,32 @@
           <div class="large">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/img1.jpg" alt="">
             <div class="overlay">
-              <a href="<?php echo get_template_directory_uri(); ?>/assets/img/work/img1.jpg" data-lightbox="img1"><i class="fa fa-search"></i></a>
+              <a href="<?php echo get_template_directory_uri(); ?>/assets/img/work/fight2.png" data-lightbox="img1"><i class="fa fa-search"></i></a>
             </div>
           </div>
           <div class="grid-box">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/img2.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/mobile.png" alt="">
             <div class="overlay">
-               <a href="<?php echo get_template_directory_uri(); ?>/assets/img/work/img2.jpg" data-lightbox="img2"><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="grid-box">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/img3.jpg" alt="">
-            <div class="overlay">
-               <a href="<?php echo get_template_directory_uri(); ?>/assets/img/work/img3.jpg" data-lightbox="img3"><i class="fa fa-search"></i></a>
+               <a href="<?php echo get_template_directory_uri(); ?>/assets/img/work/mobile2.png" data-lightbox="img2"><i class="fa fa-search"></i></a>
             </div>
           </div>
         </div>
         <div class="col-md-5 grid-right wow fadeInRight animated" data-wow-delay="1.6s">
           <div class="grid-box large">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/img4.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/website.png" alt="">
             <div class="overlay">
-               <a href="<?php echo get_template_directory_uri(); ?>/assets/img/work/img4.jpg" data-lightbox="img4"><i class="fa fa-search"></i></a>
+               <a href="<?php echo get_template_directory_uri(); ?>/assets/img/work/blog.png" data-lightbox="img4"><i class="fa fa-search"></i></a>
             </div>
           </div>
           <div class="grid-box">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/img5.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/php1.png" alt="">
             <div class="overlay">
-               <a href="<?php echo get_template_directory_uri(); ?>/assets/img/work/img5.jpg" data-lightbox="img5"><i class="fa fa-search"></i></a>
+               <a href="<?php echo get_template_directory_uri(); ?>/assets/img/work/php2.png" data-lightbox="img5"><i class="fa fa-search"></i></a>
             </div>
           </div>
           <div class="browse-box">
             <div class="more">
-              <a href="#"><i class="fa fa-arrow-circle-right"></i>BROWSE ALL</a>
+              <a href="https://github.com/JiyunShi"><i class="fa fa-arrow-circle-right"></i>BROWSE ALL</a>
             </div>
           </div>
         </div>
@@ -221,12 +215,12 @@
     <div class="container">
       <div class="row">
       <h1 class="section-title wow fadeInLeft animated" data-wow-delay=".6s">My<br>Passionate<br> <span>Skills</span></h1>
-      <div class="col-sm-6 col-md-3 wow fadeInUp animated" data-wow-delay="1.2s">
+      <div class="col-sm-6 col-md-3 wow fadeInUp animated skillStart" data-wow-delay="1.2s">
         <div class="fact-block">
           <div class="circle one">
             <div class="count-info">
-              <h3><span class="counter">70%</span></h3>
-              <h4>PHP</h4>
+              <h3><span id="circleOne" class="counter">70%</span></h3>
+              <h4>JS/Node</h4>
             </div>
           </div>
         </div>
@@ -235,7 +229,7 @@
         <div class="fact-block">
           <div class="circle two">
             <div class="count-info">
-              <h3><span class="counter">80%</span></h3>
+              <h3><span id="circleTwo" class="counter">80%</span></h3>
               <h4>WordPress</h4>
             </div>
           </div>
@@ -245,7 +239,7 @@
         <div class="fact-block">
           <div class="circle three">
             <div class="count-info">
-              <h3><span class="counter">50%</span></h3>
+              <h3><span id="circleThree" class="counter">50%</span></h3>
               <h4>CSS</h4>
             </div>
           </div>
@@ -253,9 +247,9 @@
       </div>
       <div class="col-sm-6 col-md-3 wow fadeInUp animated" data-wow-delay="1.2s">
         <div class="fact-block">
-          <div class="circle four">
+          <div class="circle Four">
             <div class="count-info">
-              <h3><span class="counter">90%</span></h3>
+              <h3><span id="circleFour" class="counter">90%</span></h3>
               <h4>HTML</h4>
             </div>
           </div>
@@ -271,6 +265,78 @@
     <div class="container">
       <div class="row">
         <h1 class="section-title wow fadeInLeft animated" data-wow-delay=".6s">My<br>Homey<br><span>Blog</span></h1>
+        
+        <?php  if ( have_posts() && wp_count_posts()->publish>=5 ) :  
+            $args = array( 'numberposts' => '5' ,'post_status' => 'publish');
+            $recent_posts = wp_get_recent_posts( $args, OBJECT );
+
+            $this_post = $recent_posts[0];
+            
+       ?>
+       <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+          <div class="blog-large wow fadeInLeft animated"  data-wow-delay="1.2s">
+            <?php if( has_post_thumbnail($this_post)): ?>
+            <img src="<?php echo get_the_post_thumbnail_url($this_post)?>" alt="">
+            <?php else: ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/img1.jpg" alt="">
+            <?php endif; ?>
+            <div class="large">
+              <a class="title" href="<?php echo esc_url( get_permalink($this_post) ); ?>"><?php echo get_the_title($this_post); ?> </a>
+              <p><?php echo wp_trim_words($this_post->post_content, 20); $this_post = $recent_posts[1];?></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight animated" data-wow-delay="1.6s">
+          <div class="blog-item">
+            <?php if( has_post_thumbnail($this_post)): ?>
+            <img src="<?php echo get_the_post_thumbnail_url($this_post)?>" alt="">
+            <?php else: ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/img2.jpg" alt="">
+            <?php endif; ?>
+            <div class="content">
+              <a class="title" href="<?php echo esc_url( get_permalink($this_post) ); ?>"><?php echo get_the_title($this_post); ?> </a>
+              <p><?php echo wp_trim_words($this_post->post_content, 10); $this_post = $recent_posts[2];?></p>
+            </div>
+          </div>
+          <div class="blog-item">
+            <?php if( has_post_thumbnail($this_post)): ?>
+            <img src="<?php echo get_the_post_thumbnail_url($this_post)?>" alt="">
+            <?php else: ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/img3.jpg" alt="">
+            <?php endif; ?>
+            <div class="content">
+              <a class="title" href="<?php echo esc_url( get_permalink($this_post) ); ?>"><?php echo get_the_title($this_post); ?> </a>
+              <p><?php echo wp_trim_words($this_post->post_content, 10); $this_post = $recent_posts[3];?></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight animated" data-wow-delay="1.8s">
+          <div class="blog-item">
+            <?php if( has_post_thumbnail($this_post)): ?>
+            <img src="<?php echo get_the_post_thumbnail_url($this_post)?>" alt="">
+            <?php else: ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/img3.jpg" alt="">
+            <?php endif; ?>
+            <div class="content">
+              <a class="title" href="<?php echo esc_url( get_permalink($this_post) ); ?>"><?php echo get_the_title($this_post); ?> </a>
+              <p><?php echo wp_trim_words($this_post->post_content, 10); $this_post = $recent_posts[4];?></p>
+            </div>
+          </div>
+          <div class="blog-item">
+            <?php if( has_post_thumbnail($this_post)): ?>
+            <img src="<?php echo get_the_post_thumbnail_url($this_post)?>" alt="">
+            <?php else: ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/img2.jpg" alt="">
+            <?php endif; ?>
+            <div class="content">
+              <a class="title" href="<?php echo esc_url( get_permalink($this_post) ); ?>"><?php echo get_the_title($this_post); ?> </a>
+              <p><?php echo wp_trim_words($this_post->post_content, 10); wp_reset_query();?></p>
+            </div>
+          </div>
+        </div>     
+            
+            
+        <?php  else: ?><!-- if no post in database -->
         <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
           <div class="blog-large wow fadeInLeft animated"  data-wow-delay="1.2s">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/img1.jpg" alt="">
@@ -312,6 +378,7 @@
             </div>
           </div>
         </div>
+        <?php endif; ?>
       </div>
     </div>
   </section>
@@ -323,7 +390,8 @@
       <div class="row">
         <h1 class="section-title wow fadeInLeft animated" data-wow-delay=".6s"><span>Hire</span><br>or Contact <br> Me</h1>
         <div class="col-sm-6 col-md-6 wow fadeInLeft animated" data-wow-delay="1.4s">
-          <form action="" name="contact">
+          <form action="<?php echo admin_url( 'admin-post.php' ) ?>" name="contact" method="post">
+              <input type="hidden" name="action" value="process_form">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-user"></i></span>
               <input type="text" name="name" class="form-control" placeholder="Your name">
@@ -419,6 +487,8 @@
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/bootstrap.min.js"></script>
   <!-- WOW JS plugin for animation -->
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/wow.js"></script>
+   <!-- Jumble JS plugin for animation -->
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jumble.js"></script>
   <!-- All JS plugin Triggers -->
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js"></script>
   <!-- Smooth scroll -->

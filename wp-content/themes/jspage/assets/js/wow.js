@@ -82,6 +82,7 @@
 
     WOW.prototype.show = function(box) {
       this.applyStyle(box);
+        
       return box.className = "" + box.className + " " + this.config.animateClass;
     };
 
@@ -137,7 +138,36 @@
               continue;
             }
             if (this.isVisible(box)) {
+                
               this.show(box);
+               /*
+                *try to work circel-progress here 
+                */
+                  if(box.className==="col-sm-6 col-md-3 wow fadeInUp animated skillStart animated"){
+                      setTimeout(function(){
+                          $('.circle').circleProgress({  
+                          value: 0.70,
+                          startAngle: 4.75,
+                          size: 200,
+                          fill: { gradient: ["#FFFFFF", "#09d2c3"] }
+                        }).on('circle-animation-progress', function(event, progress) {
+                          $('#circleOne').html(Math.round(70 * progress) + '<i>%</i>');
+                          $('#circleTwo').html(Math.round(75 * progress) + '<i>%</i>');
+                          $('#circleThree').html(Math.round(50 * progress) + '<i>%</i>');
+                          $('#circleFour').html(Math.round(90 * progress) + '<i>%</i>');
+                        });
+                          $('.two').circleProgress({
+                            value: 0.75,
+                          });
+                          $('.three').circleProgress({
+                            value: 0.50,
+                          });
+                          $('.Four').circleProgress({
+                            value: 0.90,
+                          });
+                      },1500)
+                      
+                  }
               continue;
             }
             _results.push(box);

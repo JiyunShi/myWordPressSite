@@ -18,13 +18,13 @@
         color: $color__text-input;
         .large {
             position: absolute;
-            width: 200px;
-            height: 196px;
+            width: 11em;
+            height: 11em;
             right: 0px;
             bottom: 0px;
             background: rgba(255, 255, 255, 0.9);
             padding: 15px;
-
+            overflow: hidden;
             p {
                 padding-top: 10px;
             }
