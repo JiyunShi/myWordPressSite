@@ -21,16 +21,16 @@ var wow = new WOW({
 wow.init();
 
 jQuery(document).ready(function( $ ) {
-    //circle-progress change into wow.js line 146, so the animation can be start after wow animation.     
+    //circle-progress change into wow.js line 146, so the animation can start after wow animation.     
 
    //Clients carousel Slider
     $('#clients-carousel').owlCarousel({
         navigation: false, // Show next and prev buttons
-        slideSpeed: 400,
-        paginationSpeed: 800,
+        slideSpeed: 500,
+        paginationSpeed: 900,
         autoPlay: true,
         pagination : false,
-        items : 4,
+        items : 3,
         itemsCustom : false,
         itemsDesktop : [1199,4],
         itemsDesktopSmall : [980,3],

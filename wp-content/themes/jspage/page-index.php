@@ -29,6 +29,7 @@
                 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
               <![endif]-->
     <?php wp_head(); ?>
+<img style="display: none" src="<?php echo get_template_directory_uri(); ?>/assets/img/backgrounds/imgfooter.jpg" alt="">
 </head>
 <body <?php body_class(); ?>>
    <div id="page" class="site">
@@ -150,15 +151,19 @@
                 <div class="commant">
                   <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="claint">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial/img1.jpg" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial/Stephen.jpg" alt="">
                     </div>
                     <span class="quote"><i class="fa fa-quote-left"></i></span>
                   </div>
                   <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                     <div class="info">
-                      <p>TLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
-                      <h4>Anamoul Rouf</h4>
-                      <h5>CEO, CloudBee</h5>
+                        
+                      <p><br /><br />   <br />Simply talented! <br /><br />
+Can work independently, less or no supervision required, and get things done without a glitch<br/><br /><br /></p>
+                      <h4>Stephen Chiong</h4>
+                      
+                      <h5>Professor in the Computer Science department, Douglas</h5>
+                      
                     </div>
                   </div>
                 </div>
@@ -170,15 +175,15 @@
                 <div class="commant">
                   <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="claint">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial/img2.jpg" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial/Shiv.jpeg" alt="">
                     </div>
                     <span class="quote"><i class="fa fa-quote-left"></i></span>
                   </div>
                   <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                     <div class="info">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
-                      <h4>Imran Khan</h4>
-                      <h5>Founder, WPBean</h5>
+                      <p>It's is rare to come across a guy who is really hardworking and has a real passion for what they do and Joey is one of them. Unlike other guys who just like to study for getting good grades, Joey likes to look at the practical aspects of the stuff and try to enlarge the scope, so that it can be applicable for wider area of application. We have worked together for many projects and I can say he's really a good team player - very responsible and friendly. As a business graduate and a decade of working experience, he has good knowledge of how to work with others as a team and this knowledge comes handy while we working together on new project.</p>
+                      <h4>Shiv Kumar</h4>
+                      <h5>Student - Computer and Information System, Douglas</h5>
                     </div>
                   </div>
                 </div>
@@ -189,15 +194,15 @@
                 <div class="commant">
                   <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="claint">
-                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial/img3.jpg" alt="">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/testimonial/Bland.jpg" alt="">
                     </div>
                     <span class="quote"><i class="fa fa-quote-left"></i></span>
                   </div>
                   <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
                     <div class="info">
-                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
-                      <h4>Tanvir Ahmed</h4>
-                      <h5>Contributor, GrayGrids</h5>
+                      <p>I have been worked with Joey in same company for around 5 years, I have watched him rapidly advanced from Junior assistant to be Senior responsible for this department. He has excelent analysis and creative problem-solving capability, we are all impressed by his logic sense in daily work. His personality is very easy-going and open minded. He has great relationship with company oversea office as well as local teammates. As a member of company social committee, he always takes active part in charity activities and company outdoor activities<br/><br/></p>
+                      <h4>Bland Zhao</h4>
+                      <h5>Senior product developer, H&M Asia headquarter</h5>
                     </div>
                   </div>
                 </div>
@@ -219,7 +224,7 @@
         <div class="fact-block">
           <div class="circle one">
             <div class="count-info">
-              <h3><span id="circleOne" class="counter">70%</span></h3>
+              <h3><span id="circleOne" class="counter">65%</span></h3>
               <h4>JS/Node</h4>
             </div>
           </div>
@@ -229,8 +234,8 @@
         <div class="fact-block">
           <div class="circle two">
             <div class="count-info">
-              <h3><span id="circleTwo" class="counter">80%</span></h3>
-              <h4>WordPress</h4>
+              <h3><span id="circleTwo" class="counter">75%</span></h3>
+              <h4>HTML/CSS</h4>
             </div>
           </div>
         </div>
@@ -239,8 +244,8 @@
         <div class="fact-block">
           <div class="circle three">
             <div class="count-info">
-              <h3><span id="circleThree" class="counter">50%</span></h3>
-              <h4>CSS</h4>
+              <h3><span id="circleThree" class="counter">70%</span></h3>
+              <h4>WORDPRESS</h4>
             </div>
           </div>
         </div>
@@ -249,8 +254,8 @@
         <div class="fact-block">
           <div class="circle Four">
             <div class="count-info">
-              <h3><span id="circleFour" class="counter">90%</span></h3>
-              <h4>HTML</h4>
+              <h3><span id="circleFour" class="counter">65%</span></h3>
+              <h4>JAVA/ANDROID</h4>
             </div>
           </div>
         </div>

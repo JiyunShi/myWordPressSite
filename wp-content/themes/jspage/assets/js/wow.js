@@ -146,24 +146,24 @@
                   if(box.className==="col-sm-6 col-md-3 wow fadeInUp animated skillStart animated"){
                       setTimeout(function(){
                           $('.circle').circleProgress({  
-                          value: 0.70,
+                          value: 0.65,
                           startAngle: 4.75,
                           size: 200,
                           fill: { gradient: ["#FFFFFF", "#09d2c3"] }
                         }).on('circle-animation-progress', function(event, progress) {
-                          $('#circleOne').html(Math.round(70 * progress) + '<i>%</i>');
+                          $('#circleOne').html(Math.round(65* progress) + '<i>%</i>');
                           $('#circleTwo').html(Math.round(75 * progress) + '<i>%</i>');
-                          $('#circleThree').html(Math.round(50 * progress) + '<i>%</i>');
-                          $('#circleFour').html(Math.round(90 * progress) + '<i>%</i>');
+                          $('#circleThree').html(Math.round(70 * progress) + '<i>%</i>');
+                          $('#circleFour').html(Math.round(65 * progress) + '<i>%</i>');
                         });
                           $('.two').circleProgress({
                             value: 0.75,
                           });
                           $('.three').circleProgress({
-                            value: 0.50,
+                            value: 0.70,
                           });
                           $('.Four').circleProgress({
-                            value: 0.90,
+                            value: 0.65,
                           });
                       },1500)
                       

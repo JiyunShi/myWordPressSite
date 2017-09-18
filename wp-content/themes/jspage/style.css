@@ -2243,6 +2243,11 @@ not-found .page-content .search-submit:focus {
 	position: relative;
 }
 
+#testimonial .commant .claint img {
+	width: 100%;
+	width: 100vw;
+}
+
 #testimonial .commant .quote {
 	background: #ffffff;
 	width: 64px;
