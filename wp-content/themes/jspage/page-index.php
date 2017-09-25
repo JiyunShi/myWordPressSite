@@ -75,7 +75,7 @@
           <div class="banner text-center">
             <h1 id="editorName" class="wow fadeInDown animated" data-wow-delay=".8s">Joey Shi</h1>
             <div class="wow fadeInDown animated" data-wow-delay=".6s">
-            <h2>Passionate Web developer</h2>
+            <h2>Passionate Developer</h2>
             </div>
             <a href="#feedback" class="btn btn-border lg wow fadeInLeft animated" data-wow-delay="1.0s">Hire Me</a>
             <a href="<?php echo get_home_url(); ?>/blog/" class="btn btn-common lg wow fadeInRight animated" data-wow-delay="1.0s">Blog</a>
